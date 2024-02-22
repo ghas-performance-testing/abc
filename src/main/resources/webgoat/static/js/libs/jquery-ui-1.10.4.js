@@ -14072,6 +14072,10 @@ $.widget( "ui.tabs", {
 		return hash ? hash.replace( /[!"$%&'()*+,.\/:;<=>?@\[\]\^`{|}~]/g, "\\$&" ) : "";
 	},
 
+	_sanitizeSelector2: function( hash ) {
+		return hash ? hash.replace( /[!"$%&'()*+,.\/:;<=>?@\[\]\^`{|}~]/g, "\\$&" ) : "";
+	},
+
 	refresh: function() {
 		var options = this.options,
 			lis = this.tablist.children( ":has(a[href])" );
